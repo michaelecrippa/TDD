@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TheMoneyExampleTDD.Models;
+using System;
 
 namespace MyMoneyExampleTDD_Tests
 {
@@ -9,13 +10,24 @@ namespace MyMoneyExampleTDD_Tests
         [TestMethod]
         public void TestMutliplication()
         {
-            var currentAmount = 5;
+            int startingAmount = 5;
             double coefficient = 2;
+            Dollar fiveDollars = new Dollar(startingAmount);
 
-            var dollars = new Dollar(currentAmount);
-            dollars.Times(coefficient);
+            Assert.AreEqual(new Dollar(startingAmount * coefficient), fiveDollars.Times(coefficient));
+            Assert.AreEqual(
+                new Dollar(startingAmount * Math.Pow(coefficient, 2)), 
+                fiveDollars.Times(Math.Pow(coefficient, 2))
+                );
+        }
 
-            Assert.AreEqual(currentAmount * coefficient, dollars.Amount);
+        [TestMethod]
+        public void TestEquality()
+        {
+            int startingAmount = 5;
+
+            Assert.IsTrue(new Dollar(startingAmount).Equals(new Dollar(startingAmount)));
+            Assert.IsFalse(new Dollar(startingAmount).Equals(new Dollar(startingAmount + 1)));
         }
     }
 }

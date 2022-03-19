@@ -1,23 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheMoneyExampleTDD.Models
+﻿namespace TheMoneyExampleTDD.Models
 {
     public class Dollar
     {
-        public double Amount { get; set; }
+        private double Amount;
 
         public Dollar(double amount)
         {
             Amount = amount;
         }
 
-        public void Times(double multiplier)
+        public Dollar Times(double multiplier)
         {
-            Amount *= multiplier;
+            return new Dollar(Amount *= multiplier);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            Dollar otherDollar = (Dollar)obj;
+
+            return Amount == otherDollar.Amount;
         }
     }
 }
