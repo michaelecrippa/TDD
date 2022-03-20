@@ -1,17 +1,17 @@
 ﻿namespace TheMoneyExampleTDD.Models
 {
-    public class Dollar
+    public class Franc
     {
         private double Amount;
 
-        public Dollar(double amount)
+        public Franc(double amount)
         {
             Amount = amount;
         }
 
-        public Dollar Times(double multiplier)
+        public Franc Times(double multiplier)
         {
-            return new Dollar(Amount * multiplier);
+            return new Franc(Amount * multiplier);
         }
 
         public override bool Equals(object obj)
@@ -21,9 +21,10 @@
                 return false;
             }
 
-            Dollar otherDollar = (Dollar)obj;
+            Franc other = (Franc)obj;
 
-            return Amount == otherDollar.Amount;
+            return Amount == other.Amount;
         }
     }
 }
+

@@ -1,6 +1,8 @@
-﻿class Program 
+﻿using TheMoneyExampleTDD.Models;
+
+class Program 
 { 
-    static void Main(string[] args)
+    static void Main()
     {
     
     }
