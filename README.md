@@ -8,4 +8,8 @@ Repository following the book Test-Driven Development by Kent Beck
     - Make it right  
    
 *Chapter 3 - Equality for All*
-*Chapter 4 - Privacy*
+*Chapter 4 - Privacy*  
+*Chapter 5 - Franc-ly Speaking*  
+*Chapter 6 - Equality for all, Redux*  
+
+

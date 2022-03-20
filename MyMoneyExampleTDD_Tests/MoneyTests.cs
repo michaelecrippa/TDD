@@ -10,15 +10,11 @@ namespace MyMoneyExampleTDD_Tests
         [TestMethod]
         public void TestMutliplication()
         {
-            int startingAmount = 5;
+            double startingAmount = 5;
             double coefficient = 2;
-            Dollar fiveDollars = new Dollar(startingAmount);
 
-            Assert.AreEqual(new Dollar(startingAmount * coefficient), fiveDollars.Times(coefficient));
-            Assert.AreEqual(
-                new Dollar(startingAmount * Math.Pow(coefficient, 2)),
-                fiveDollars.Times(Math.Pow(coefficient, 2))
-                );
+            TestCurrencyMultiplication<Dollar>(startingAmount, coefficient);
+            TestCurrencyMultiplication<Franc>(startingAmount, coefficient);
         }
 
         [TestMethod]
@@ -26,22 +22,26 @@ namespace MyMoneyExampleTDD_Tests
         {
             int startingAmount = 5;
 
-            Assert.IsTrue(new Dollar(startingAmount).Equals(new Dollar(startingAmount)));
-            Assert.IsFalse(new Dollar(startingAmount).Equals(new Dollar(startingAmount + 1)));
+            TestCurrencyEquality<Dollar>(startingAmount);
+            TestCurrencyEquality<Franc>(startingAmount);
         }
 
         [TestMethod]
-        public void TestFrancMutliplication()
+        private void TestCurrencyMultiplication<T>(double startingAmount, double coefficient) where T : Money
         {
-            int startingAmount = 5;
-            double coefficient = 2;
-            Franc fiveFrancs = new Franc(startingAmount);
-
-            Assert.AreEqual(new Franc(startingAmount * coefficient), fiveFrancs.Times(coefficient));
+            var currentCurrencyValue = new Money(startingAmount);
+            Assert.AreEqual(new Money(startingAmount * coefficient), currentCurrencyValue.Times(coefficient));
             Assert.AreEqual(
-                new Franc(startingAmount * Math.Pow(coefficient, 2)),
-                fiveFrancs.Times(Math.Pow(coefficient, 2))
+                new Money(startingAmount * Math.Pow(coefficient, 2)),
+                currentCurrencyValue.Times(Math.Pow(coefficient, 2))
                 );
+        }
+
+        [TestMethod]
+        private void TestCurrencyEquality<T>(double startingAmount) where T : Money
+        {
+            Assert.IsTrue(new Money(startingAmount).Equals(new Money(startingAmount)));
+            Assert.IsFalse(new Money(startingAmount).Equals(new Money(startingAmount + 1)));
         }
     }
 }
