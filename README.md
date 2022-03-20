@@ -7,10 +7,12 @@ Repository following the book Test-Driven Development by Kent Beck
     - Make it run
     - Make it right  
    
-*Chapter 3 - Equality for All*
+*Chapter 3 - Equality for All*  
 *Chapter 4 - Privacy*  
 *Chapter 5 - Franc-ly Speaking*  
 *Chapter 6 - Equality for all, Redux*  
 *Chapter 7 - Apples and Oranges*  
+*Chapter 8 - Making Objects*  
+
 
 

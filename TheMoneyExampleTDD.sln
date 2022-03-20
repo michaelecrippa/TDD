@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMoneyExampleTDD", "TheMoneyExampleTDD\TheMoneyExampleTDD.csproj", "{14F8A48C-DE18-4D3C-9F27-6F918DB62DB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheMoneyExampleTDD", "TheMoneyExampleTDD\TheMoneyExampleTDD.csproj", "{14F8A48C-DE18-4D3C-9F27-6F918DB62DB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMoneyExampleTDD_Tests", "MyMoneyExampleTDD_Tests\MyMoneyExampleTDD_Tests.csproj", "{9EB07159-D6E8-47A9-BB45-25A1BFEF2423}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheMoneyExampleTDD_Tests", "MyMoneyExampleTDD_Tests\TheMoneyExampleTDD_Tests.csproj", "{9EB07159-D6E8-47A9-BB45-25A1BFEF2423}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
