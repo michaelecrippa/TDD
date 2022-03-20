@@ -11,5 +11,6 @@ Repository following the book Test-Driven Development by Kent Beck
 *Chapter 4 - Privacy*  
 *Chapter 5 - Franc-ly Speaking*  
 *Chapter 6 - Equality for all, Redux*  
+*Chapter 7 - Apples and Oranges*  
 
 

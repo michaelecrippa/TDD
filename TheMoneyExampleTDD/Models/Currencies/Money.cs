@@ -1,4 +1,4 @@
-﻿namespace TheMoneyExampleTDD.Models
+﻿namespace TheMoneyExampleTDD.Models.Currencies
 {
     public class Money
     {
@@ -23,7 +23,7 @@
 
             Money other = (Money)obj;
 
-            return Amount == other.Amount;
+            return Amount == other.Amount && GetType().Equals(other.GetType());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using TheMoneyExampleTDD.Models;
+﻿using TheMoneyExampleTDD.Models.Currencies;
 
 class Program 
 { 

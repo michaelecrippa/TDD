@@ -1,4 +1,4 @@
-﻿namespace TheMoneyExampleTDD.Models
+﻿namespace TheMoneyExampleTDD.Models.Currencies
 {
     public class Dollar : Money
     {

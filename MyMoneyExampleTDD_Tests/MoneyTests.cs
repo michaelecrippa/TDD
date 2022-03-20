@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TheMoneyExampleTDD.Models;
+using TheMoneyExampleTDD.Models.Currencies;
 using System;
 
 namespace MyMoneyExampleTDD_Tests
@@ -24,6 +24,8 @@ namespace MyMoneyExampleTDD_Tests
 
             TestCurrencyEquality<Dollar>(startingAmount);
             TestCurrencyEquality<Franc>(startingAmount);
+
+            TestDifferentCurrencyEquality<Dollar, Franc>(startingAmount);
         }
 
         [TestMethod]
@@ -42,6 +44,14 @@ namespace MyMoneyExampleTDD_Tests
         {
             Assert.IsTrue(new Money(startingAmount).Equals(new Money(startingAmount)));
             Assert.IsFalse(new Money(startingAmount).Equals(new Money(startingAmount + 1)));
+        }
+
+        [TestMethod]
+        private void TestDifferentCurrencyEquality<T, U>(double startingAmount) 
+            where T : Dollar
+            where U : Franc
+        {
+            Assert.IsFalse(new Dollar(startingAmount).Equals(new Franc(startingAmount)));
         }
     }
 }
