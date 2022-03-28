@@ -1,17 +1,15 @@
 ﻿namespace TheMoneyExampleTDD.Models.Currencies
 {
-    public class Money
+    public abstract class Money
     {
         protected double Amount;
 
-        public Money(double amount)
+        protected string Currency { get; set; }
+
+        public Money(double amount, string currency)
         {
             Amount = amount;
-        }
-
-        public Money Times(double multiplier)
-        {
-            return new Money(Amount * multiplier);
+            Currency = currency;
         }
 
         public override bool Equals(object obj)
