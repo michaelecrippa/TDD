@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TheMoneyExampleTDD.Models;
 using TheMoneyExampleTDD.Models.Currencies;
-using System;
 
 namespace MyMoneyExampleTDD_Tests
 {
@@ -32,6 +32,18 @@ namespace MyMoneyExampleTDD_Tests
             Assert.IsFalse(Money.Franc(startingAmount).Equals(Money.Franc(startingAmount + 1)));
 
             Assert.IsFalse(Money.Franc(startingAmount).Equals(Money.Dollar(startingAmount)));
+        }
+
+        [TestMethod]
+        public void TestAddition()
+        {
+            int startingAmount = 5;
+
+            Money five = Money.Dollar(startingAmount);
+            Expression sum = five.Plus(five);
+            Bank bank = new Bank();
+            Money reduced = bank.Reduce(sum, "USD");
+            Assert.AreEqual(reduced, Money.Dollar(startingAmount + startingAmount));
         }
     }
 }

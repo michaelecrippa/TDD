@@ -1,6 +1,6 @@
 ﻿namespace TheMoneyExampleTDD.Models.Currencies
 {
-    public class Money
+    public class Money : Expression
     {
         protected double Amount;
 
@@ -37,6 +37,11 @@
         public static Money Franc(double amount)
         {
             return new Money(amount, "CHF");
+        }
+
+        public Expression Plus(Money addend)
+        {
+            return new Money(Amount + addend.Amount, Currency);
         }
     }
 }
