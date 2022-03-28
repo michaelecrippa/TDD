@@ -55,5 +55,21 @@ namespace MyMoneyExampleTDD_Tests
 
             Assert.AreEqual(result, Money.Dollar(1));
         }
+
+        [TestMethod]
+        public void TestReduceDifferentCurrencies()
+        {
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            Money result = bank.Reduce(Money.Franc(2), "USD");
+
+            Assert.AreEqual(result, Money.Dollar(1));
+        }
+
+        [TestMethod]
+        public void TestIdentityRate()
+        {
+            Assert.AreEqual(new Bank().GetRate("USD", "USD"), 1.0);
+        }
     }
 }

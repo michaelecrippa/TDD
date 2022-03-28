@@ -13,7 +13,7 @@ namespace TheMoneyExampleTDD.Models
             Addend = addend;
             Augend = augmend;
         }
-        public Money Reduce(string to)
+        public Money Reduce(Bank _, string to)
         {
             return new Money(Addend.Amount + Augend.Amount, to);
         }
