@@ -1,6 +1,6 @@
 ﻿namespace TheMoneyExampleTDD.Models.Currencies
 {
-    public abstract class Money
+    public class Money
     {
         protected double Amount;
 
@@ -12,6 +12,11 @@
             Currency = currency;
         }
 
+        public Money Times(double multiplier)
+        {
+            return new Money(Amount * multiplier, Currency);
+        }
+
         public override bool Equals(object obj)
         {
             if (obj == null)
@@ -21,7 +26,17 @@
 
             Money other = (Money)obj;
 
-            return Amount == other.Amount && GetType().Equals(other.GetType());
+            return Amount == other.Amount && Currency == other.Currency;
+        }
+
+        public static Money Dollar(double amount)
+        {
+            return new Money(amount, "USD");
+        }
+
+        public static Money Franc(double amount)
+        {
+            return new Money(amount, "CHF");
         }
     }
 }

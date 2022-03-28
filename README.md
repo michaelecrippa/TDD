@@ -13,7 +13,10 @@ Repository following the book Test-Driven Development by Kent Beck
 *Chapter 6 - Equality for all, Redux*  
 *Chapter 7 - Apples and Oranges*  
 *Chapter 8 - Making Objects*  
-*Chapter 9 - Times We're Livin'In*
+*Chapter 9 - Times We're Livin'In*  
+*Chapter 10 - Interesting Times*  
+*Chapter 11 - The Root of All Evil*  
+
 
 
 
