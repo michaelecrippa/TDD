@@ -16,7 +16,9 @@ Repository following the book Test-Driven Development by Kent Beck
 *Chapter 9 - Times We're Livin'In*  
 *Chapter 10 - Interesting Times*  
 *Chapter 11 - The Root of All Evil*   
-*Chapter 12 - Addition, Finally*
+*Chapter 12 - Addition, Finally*  
+*Chapter 13 - Make It*  
+
 
 
 

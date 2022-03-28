@@ -6,7 +6,7 @@ namespace TheMoneyExampleTDD.Models
     {
         public Money Reduce(Expression source, string to)
         {
-            return Money.Dollar(10);
+            return source.Reduce(to);
         }
     }
 }

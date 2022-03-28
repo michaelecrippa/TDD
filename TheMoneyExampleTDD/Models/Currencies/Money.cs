@@ -2,7 +2,7 @@
 {
     public class Money : Expression
     {
-        protected double Amount;
+        public double Amount { get; private set; }
 
         protected string Currency { get; set; }
 
@@ -41,7 +41,12 @@
 
         public Expression Plus(Money addend)
         {
-            return new Money(Amount + addend.Amount, Currency);
+            return new Sum(this, addend);
+        }
+
+        public Money Reduce(string to)
+        {
+            return this;
         }
     }
 }

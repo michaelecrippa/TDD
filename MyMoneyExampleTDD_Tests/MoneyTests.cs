@@ -41,9 +41,19 @@ namespace MyMoneyExampleTDD_Tests
 
             Money five = Money.Dollar(startingAmount);
             Expression sum = five.Plus(five);
+
             Bank bank = new Bank();
             Money reduced = bank.Reduce(sum, "USD");
             Assert.AreEqual(reduced, Money.Dollar(startingAmount + startingAmount));
+        }
+
+        [TestMethod]
+        public void TestReduceMoney()
+        {
+            Bank bank = new Bank();
+            Money result = bank.Reduce(Money.Dollar(1), "USD");
+
+            Assert.AreEqual(result, Money.Dollar(1));
         }
     }
 }
