@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheMoneyExampleTDD", "TheMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheMoneyExampleTDD_Tests", "MyMoneyExampleTDD_Tests\TheMoneyExampleTDD_Tests.csproj", "{9EB07159-D6E8-47A9-BB45-25A1BFEF2423}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheXUnitExample", "TheXUnitExample\TheXUnitExample.csproj", "{EECD8CBA-2E43-499D-A860-2954404D96B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9EB07159-D6E8-47A9-BB45-25A1BFEF2423}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EB07159-D6E8-47A9-BB45-25A1BFEF2423}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EB07159-D6E8-47A9-BB45-25A1BFEF2423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EECD8CBA-2E43-499D-A860-2954404D96B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECD8CBA-2E43-499D-A860-2954404D96B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECD8CBA-2E43-499D-A860-2954404D96B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECD8CBA-2E43-499D-A860-2954404D96B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
