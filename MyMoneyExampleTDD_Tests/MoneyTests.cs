@@ -71,5 +71,17 @@ namespace MyMoneyExampleTDD_Tests
         {
             Assert.AreEqual(new Bank().GetRate("USD", "USD"), 1.0);
         }
+
+        [TestMethod]
+        public void TestMixedAddition()
+        {
+            Expression five = Money.Dollar(5);
+            Expression ten = Money.Franc(10);
+            var bank = new Bank();
+
+            bank.AddRate("CHF", "USD", 2);
+            Money result = bank.Reduce(five.Plus(ten), "USD");
+            Assert.AreEqual(Money.Dollar(10), result);
+        }
     }
 }

@@ -4,18 +4,24 @@ namespace TheMoneyExampleTDD.Models
 {
     public class Sum : Expression
     {
-        public Money Addend {  get; set; }
+        public Expression Addend {  get; set; }
 
-        public Money Augend { get; set; }
+        public Expression Augend { get; set; }
 
-        public Sum(Money addend, Money augmend)
+        public Sum(Expression addend, Expression augend)
         {
             Addend = addend;
-            Augend = augmend;
+            Augend = augend;
         }
-        public Money Reduce(Bank _, string to)
+
+        public Money Reduce(Bank bank, string to)
         {
-            return new Money(Addend.Amount + Augend.Amount, to);
+            return new Money(Addend.Reduce(bank, to).Amount + Augend.Reduce(bank, to).Amount, to);
+        }
+
+        public Expression Plus(Expression other)
+        {
+            return null;
         }
     }
 }

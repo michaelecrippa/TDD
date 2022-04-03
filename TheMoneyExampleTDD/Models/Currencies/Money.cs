@@ -12,7 +12,7 @@
             Currency = currency;
         }
 
-        public Money Times(double multiplier)
+        public Expression Times(double multiplier)
         {
             return new Money(Amount * multiplier, Currency);
         }
@@ -39,7 +39,7 @@
             return new Money(amount, "CHF");
         }
 
-        public Expression Plus(Money addend)
+        public Expression Plus(Expression addend)
         {
             return new Sum(this, addend);
         }
