@@ -19,7 +19,9 @@ Repository following the book Test-Driven Development by Kent Beck
 *Chapter 12 - Addition, Finally*  
 *Chapter 13 - Make It*  
 *Chapter 14 - Change*  
-*Chapter 15 - Mixed Currencies*
+*Chapter 15 - Mixed Currencies*  
+*Chapter 16 - Abstraction, Finally*  
+
 
 
 

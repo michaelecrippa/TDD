@@ -50,5 +50,10 @@
 
             return new Money(Amount / rate, to);
         }
+
+        public Expression Times(int times)
+        {
+            return new Money(Amount * times, Currency);
+        }
     }
 }

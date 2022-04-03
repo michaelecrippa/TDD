@@ -19,9 +19,14 @@ namespace TheMoneyExampleTDD.Models
             return new Money(Addend.Reduce(bank, to).Amount + Augend.Reduce(bank, to).Amount, to);
         }
 
-        public Expression Plus(Expression other)
+        public Expression Plus(Expression addend)
         {
-            return null;
+            return new Sum(this, addend);
+        }
+
+        public Expression Times(int times)
+        {
+            return new Sum(Augend.Times(times), Addend.Times(times));
         }
     }
 }
