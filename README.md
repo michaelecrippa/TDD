@@ -1,6 +1,7 @@
-Repository following the book Test-Driven Development by Kent Beck
+Repository following the book Test-Driven Development by Kent Beck.
 
-*Chapter 1 - The Money Example*  
+## *Part I - The Money Example*  
+*Chapter 1 - Multi-Currency Money*  
 *Chapter 2 - Degenerate Objects*  
  - General TDD cycle (The goal is clean code that works)   
     - Write a test
@@ -21,6 +22,26 @@ Repository following the book Test-Driven Development by Kent Beck
 *Chapter 14 - Change*  
 *Chapter 15 - Mixed Currencies*  
 *Chapter 16 - Abstraction, Finally*  
+*Chapter 17 - Money Retrospective*  
+ - What's next?
+ - Metaphor
+ - JUNit usage (some statistics)
+ - Code metrics (more statistics)
+ - Process
+    - Add a litle test
+    - Run all tests and fail
+    - Make a change
+    - Run the tests and success
+    - Refactor and remove duplicates
+ - Test quality
+ - One last review  
+
+---
+## *Part II - The xUnit Example*   
+*Chapter 18 - First Steps to xUnit*  
+  
+
+
 
 
 
