@@ -11,11 +11,6 @@ namespace TheXUnitExample
             TestCase = new TestCase(testName);
         }
 
-        public void Run()
-        {
-            CustomConsole.Write(CustomConsole.SetUp);
-            TestCase.Invoke();
-            CustomConsole.Write(CustomConsole.TearDown);
-        }
+        public TestResult Run() => TestCase.Invoke();
     }
 }

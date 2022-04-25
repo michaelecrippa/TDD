@@ -7,10 +7,12 @@ namespace TheXUnitExample
     {
         private readonly WasRun test;
 
+        private readonly TestResult testResult;
+
         public TestCaseTest(string testName = "")
         {
             test = new WasRun(testName);
-            test.Run();
+            testResult = test.Run();
         }
 
         public void IsTestRun()
@@ -26,6 +28,11 @@ namespace TheXUnitExample
         public void IsTestTearDown()
         {
             Assert.IsTrue(CustomConsole.Contains(CustomConsole.TearDown));
+        }
+
+        public void TestFailedResult()
+        {
+            Assert.AreEqual(testResult.Summary, "0 run, 0 failed 1");
         }
     }
 }

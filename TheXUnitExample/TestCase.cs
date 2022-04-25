@@ -11,10 +11,15 @@ namespace TheXUnitExample
             TestName = testName;
         }
 
-        public void Invoke()
+        public TestResult Invoke()
         {
-            //do some work
+            var result = new TestResult();
+            result.TestStarted();
+            CustomConsole.Write(CustomConsole.SetUp);
             CustomConsole.Write(CustomConsole.Run);
+            CustomConsole.Write(CustomConsole.TearDown);
+
+            return result;
         }
     }
 }
