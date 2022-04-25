@@ -39,6 +39,11 @@ Repository following the book Test-Driven Development by Kent Beck.
 ---
 ## *Part II - The xUnit Example*   
 *Chapter 18 - First Steps to xUnit*  
+*Chapter 19 - Set the Table*  
+When you begin writing tests, you will discover a common pattern: **Arrange -> Act -> Assert**  
+Constraints
+ - Performane
+ - Isolation
   
 
 
