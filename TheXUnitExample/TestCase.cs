@@ -1,4 +1,6 @@
-﻿namespace TheXUnitExample
+﻿using TheXUnitExample.Console;
+
+namespace TheXUnitExample
 {
     public class TestCase
     {
@@ -12,6 +14,7 @@
         public void Invoke()
         {
             //do some work
+            CustomConsole.Write(CustomConsole.Run);
         }
     }
 }

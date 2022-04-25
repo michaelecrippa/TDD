@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TheXUnitExample.Console;
 
 namespace TheXUnitExample
 {
@@ -9,19 +10,22 @@ namespace TheXUnitExample
         public TestCaseTest(string testName = "")
         {
             test = new WasRun(testName);
+            test.Run();
         }
 
-        public void TestRun()
+        public void IsTestRun()
         {
-            Assert.IsFalse(test.WasTestRun());
-            test.Run();
-            Assert.IsTrue(test.WasTestRun());
+            Assert.IsTrue(CustomConsole.Contains(CustomConsole.Run));
         }
 
-        public void TestSetUp()
+        public void IsTestSetUp()
         {
-            test.Run();
-            Assert.IsTrue(test.WasTestSetUp());
+            Assert.IsTrue(CustomConsole.Contains(CustomConsole.SetUp));
+        }
+
+        public void IsTestTearDown()
+        {
+            Assert.IsTrue(CustomConsole.Contains(CustomConsole.TearDown));
         }
     }
 }
