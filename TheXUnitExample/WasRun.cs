@@ -1,6 +1,4 @@
-﻿using TheXUnitExample.Console;
-
-namespace TheXUnitExample
+﻿namespace TheXUnitExample
 {
     public class WasRun
     {
@@ -11,6 +9,6 @@ namespace TheXUnitExample
             TestCase = new TestCase(testName);
         }
 
-        public TestResult Run() => TestCase.Invoke();
+        public TestResult Run() => TestCase.Run();
     }
 }

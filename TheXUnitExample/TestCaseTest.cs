@@ -32,7 +32,16 @@ namespace TheXUnitExample
 
         public void TestFailedResult()
         {
-            Assert.AreEqual(testResult.Summary, "0 run, 0 failed 1");
+            testResult.TestFailed();
+            Assert.AreEqual(testResult.Summary, "0 run, 1 failed");
+        }
+
+        public void TestFailedResultFormatting()
+        {
+            testResult.TestStarted();
+            testResult.TestFailed();
+
+            Assert.AreEqual("1 run, 1 failed", testResult.Summary);
         }
     }
 }

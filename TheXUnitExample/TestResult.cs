@@ -4,25 +4,30 @@
     {
         private string _summary;
 
-        public string Summary {
-            get
-            {
-                return String.Format("{0} run, {1} failed {2}", 0, 0, _counter);
-            }
+        public string Summary 
+        {
+            get => string.Format("{0} run, {1} failed", _runCount, _errorCount);
             set => _summary = value;
         }
 
-        private int _counter;
+        private int _runCount;
+
+        private int _errorCount;
 
         public TestResult()
         {
-            Summary = "mock summary";
-            _counter = 0;
+            _runCount = 0;
+            _errorCount = 0;
         }
 
         public void TestStarted()
         {
-            _counter++;
+            _runCount++;
+        }
+
+        public void TestFailed()
+        {
+            _errorCount++;
         }
     }
 }

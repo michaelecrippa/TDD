@@ -11,13 +11,35 @@ namespace TheXUnitExample
             TestName = testName;
         }
 
-        public TestResult Invoke()
+        private void SetUp()
+        {
+            CustomConsole.Write(CustomConsole.SetUp);
+        }
+
+        private void TearDown()
+        {
+            CustomConsole.Write(CustomConsole.TearDown);
+        }
+
+        private void Invoke()
+        {
+            CustomConsole.Write(CustomConsole.Run);
+        }
+
+        public TestResult Run()
         {
             var result = new TestResult();
             result.TestStarted();
-            CustomConsole.Write(CustomConsole.SetUp);
-            CustomConsole.Write(CustomConsole.Run);
-            CustomConsole.Write(CustomConsole.TearDown);
+            try
+            {
+                SetUp();
+                Invoke();
+            }
+            catch (Exception)
+            {
+                result.TestFailed();
+            }
+            TearDown();
 
             return result;
         }
