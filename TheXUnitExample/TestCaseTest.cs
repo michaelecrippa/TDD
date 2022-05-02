@@ -55,17 +55,17 @@ namespace TheXUnitExample
 
         private void IsTestRun()
         {
-            Assert.IsTrue(CustomConsole.Contains(this.TestName + '-' + CustomConsole.Run));
+            Assert.IsTrue(CustomConsole.Contains(TestName + '-' + CustomConsole.Run));
         }
 
         private void IsTestSetUp()
         {
-            Assert.IsTrue(CustomConsole.Contains(this.TestName + '-' + CustomConsole.SetUp));
+            Assert.IsTrue(CustomConsole.Contains(TestName + '-' + CustomConsole.SetUp));
         }
 
         private void IsTestTearDown()
         {
-            Assert.IsTrue(CustomConsole.Contains(this.TestName + '-' + CustomConsole.TearDown));
+            Assert.IsTrue(CustomConsole.Contains(TestName + '-' + CustomConsole.TearDown));
         }
     }
 }
