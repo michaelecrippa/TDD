@@ -1,5 +1,6 @@
-Repository following the book Test-Driven Development by Kent Beck.
+Repository following the book Test-Driven Development by Kent Beck.  
 
+---
 ## *Part I - The Money Example*  
 *Chapter 1 - Multi-Currency Money*  
 *Chapter 2 - Degenerate Objects*  
@@ -49,6 +50,59 @@ Constraints
 *Chapter 21 - Counting*  
 *Chapter 22 - Dealing with Failure*  
 *Chapter 23 - How Suite It Is*  
+*Chapter 24 - xUnit Retrospective*  
+
+---
+## *Part III - Patterns for TDD*  
+*Chapter 25 - TDD Patterns*  
+- Test
+- Isolated Test
+- Test List
+- Test First
+- Assert First
+- Test Data
+- Evident Data  
+
+*Chapter 26 - Red Bar Patterns*  
+- One Step Test
+- Starter Test  
+- Explanation Test  
+- Learning Test  
+- Another Test  
+- Regression Test  
+- Break  
+- Do Over  
+- Cheap Desk, Nice Chair  
+
+*Chapter 27 - Testing Patterns*  
+- Child Test
+- Mock Objects  
+- Self Shunt  
+- Log String  
+- Crash Test Dummy 
+- Broken Test (Broken Check-out)
+- Clean Check-in  
+
+*Chapter 28 - Green Bar Patterns*  
+- Fake It 
+- Triangulate  
+- Obvious Implementation  
+- One to Many  
+
+*Chapter 29 - xUnit Patterns*  
+- Assertion  
+- Fixture  
+- External Fixture  
+- Test Method  
+- Exception Test  
+- All Tests  
+
+*Chapter 30 - Design Patterns*   
+- Command  
+- Value Objects  
+- Null Objects  
+- Template Methods  
+ 
 
 
   
