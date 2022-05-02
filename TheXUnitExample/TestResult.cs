@@ -16,8 +16,19 @@
 
         public TestResult()
         {
+            _summary = string.Empty;
             _runCount = 0;
             _errorCount = 0;
+        }
+
+        public static TestResult operator +(TestResult thisResult, TestResult otherResult)
+        {
+            return new TestResult()
+            {
+                _errorCount = thisResult._errorCount + otherResult._errorCount,
+                _runCount = thisResult._runCount + otherResult._runCount,
+                _summary = string.Empty
+            };
         }
 
         public void TestStarted()

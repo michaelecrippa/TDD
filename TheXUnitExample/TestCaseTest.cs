@@ -3,45 +3,69 @@ using TheXUnitExample.Console;
 
 namespace TheXUnitExample
 {
-    public class TestCaseTest
+    public class TestCaseTest : TestCase
     {
-        private readonly WasRun test;
+        private TestResult testResult;
 
-        private readonly TestResult testResult;
-
-        public TestCaseTest(string testName = "")
+        public TestCaseTest(string testName = "") : base(testName)
         {
-            test = new WasRun(testName);
+            testResult = new TestResult();
+        }
+
+        public void TestTemplateMethod()
+        {
+            TestCase test = WasRun.WasTestRun("testMethod");
             testResult = test.Run();
+            IsTestSetUp();
+            IsTestRun();
+            IsTestTearDown();
         }
 
-        public void IsTestRun()
+        public void TestResult()
         {
-            Assert.IsTrue(CustomConsole.Contains(CustomConsole.Run));
-        }
-
-        public void IsTestSetUp()
-        {
-            Assert.IsTrue(CustomConsole.Contains(CustomConsole.SetUp));
-        }
-
-        public void IsTestTearDown()
-        {
-            Assert.IsTrue(CustomConsole.Contains(CustomConsole.TearDown));
+            TestCase test = WasRun.WasTestRun("testMethod");
+            testResult = test.Run();
+            Assert.AreEqual(testResult.Summary, "1 run, 0 failed");
         }
 
         public void TestFailedResult()
         {
-            testResult.TestFailed();
+            TestCase test = WasRun.WasTestRun("testBrokenMethod");
+            testResult = test.Run();
             Assert.AreEqual(testResult.Summary, "0 run, 1 failed");
         }
 
         public void TestFailedResultFormatting()
         {
-            testResult.TestStarted();
-            testResult.TestFailed();
+            var result = new TestResult();
+            result.TestStarted();
+            result.TestFailed();
 
             Assert.AreEqual("1 run, 1 failed", testResult.Summary);
+        }
+
+        public void TestSuite()
+        {
+           var suite = new TestSuite();
+           suite.Add(WasRun.WasTestRun("testMethod"));
+           suite.Add(WasRun.WasTestRun("testBrokenMethod"));
+           testResult = suite.Run();
+           Assert.AreEqual("2 run, 1 failed", testResult.Summary);
+        }
+
+        private void IsTestRun()
+        {
+            Assert.IsTrue(CustomConsole.Contains(this.TestName + '-' + CustomConsole.Run));
+        }
+
+        private void IsTestSetUp()
+        {
+            Assert.IsTrue(CustomConsole.Contains(this.TestName + '-' + CustomConsole.SetUp));
+        }
+
+        private void IsTestTearDown()
+        {
+            Assert.IsTrue(CustomConsole.Contains(this.TestName + '-' + CustomConsole.TearDown));
         }
     }
 }

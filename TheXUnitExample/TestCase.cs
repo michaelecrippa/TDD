@@ -11,21 +11,6 @@ namespace TheXUnitExample
             TestName = testName;
         }
 
-        private void SetUp()
-        {
-            CustomConsole.Write(CustomConsole.SetUp);
-        }
-
-        private void TearDown()
-        {
-            CustomConsole.Write(CustomConsole.TearDown);
-        }
-
-        private void Invoke()
-        {
-            CustomConsole.Write(CustomConsole.Run);
-        }
-
         public TestResult Run()
         {
             var result = new TestResult();
@@ -42,6 +27,22 @@ namespace TheXUnitExample
             TearDown();
 
             return result;
+        }
+
+        private void SetUp()
+        {
+            CustomConsole.Write(TestName + '-' + CustomConsole.SetUp);
+        }
+
+        private void TearDown()
+        {
+            CustomConsole.Write(TestName + '-' + CustomConsole.TearDown);
+            CustomConsole.Write(string.Empty);
+        }
+
+        private void Invoke()
+        {
+            CustomConsole.Write(TestName + '-' + CustomConsole.Run);
         }
     }
 }

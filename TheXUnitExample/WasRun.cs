@@ -1,14 +1,10 @@
 ﻿namespace TheXUnitExample
 {
-    public class WasRun
+    public static class WasRun
     {
-        public TestCase TestCase { get; set; }
-
-        public WasRun(string testName = "")
+        public static TestCase WasTestRun(string testName = "")
         {
-            TestCase = new TestCase(testName);
+            return new TestCase(testName);
         }
-
-        public TestResult Run() => TestCase.Run();
     }
 }
