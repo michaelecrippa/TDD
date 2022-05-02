@@ -48,7 +48,7 @@ Constraints
 *Chapter 20 - Cleaning Up After*  
 *Chapter 21 - Counting*  
 *Chapter 22 - Dealing with Failure*  
-*Chapter 22 - How Suite It Is*  
+*Chapter 23 - How Suite It Is*  
 
 
   
