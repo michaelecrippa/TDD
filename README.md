@@ -102,14 +102,25 @@ Constraints
 - Value Objects  
 - Null Objects  
 - Template Methods  
+- Pluggable Objects  
+- Pluggable Selector  
+- Factory Method  
+- Imposter  
+- Composite  
+- Collecting Parameter  
+- Singleton  
+
+*Chapter 31 - Refactoring*  
+- Reconcile Differences  
+- Isolate Change  
+- Migrate Data  
+- Extract Method  
+- Inline Method  
+- Extract Interface  
+- Move Method  
+- Method Object  
+- Add Parameter  
+- Method Parameter to Constructor Parameter  
+
  
-
-
-  
-
-
-
-
-
-
-
+*Chapter 32 - Mastering TDD*  
